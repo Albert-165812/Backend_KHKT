@@ -13,7 +13,8 @@ Jinja2==3.1.2
 MarkupSafe==2.1.1
 jsons==1.6.3
 Werkzeug==2.0.1
-streamlit==1.10.0
+streamlit==1.1.0
+plotly==5.1.0
 
 
 
