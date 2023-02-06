@@ -93,4 +93,5 @@ def data_lesson():
 
 # Start Backend
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='6868')
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=6868)
