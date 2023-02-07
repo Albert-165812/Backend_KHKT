@@ -1,0 +1,71 @@
+[33mcommit 4a088f0ad3dce2fa79fe968c225070c356ce627a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Tue Feb 7 07:58:27 2023 +0700
+
+    update numpy==1.21.6
+
+[33mcommit 7a9b978730274f8879493e5d0f2fb0b6e96e7964[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Tue Feb 7 07:57:00 2023 +0700
+
+    update matplotlib==3.5.3
+
+[33mcommit 386a7b73ae1ee4c0a46e4cdf5f2956796198c4bd[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Tue Feb 7 07:55:34 2023 +0700
+
+    update ipython==7.34.0
+
+[33mcommit 3b30f412a94e38abb77dd908238f556bbb0a6b06[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Tue Feb 7 07:54:06 2023 +0700
+
+    update
+
+[33mcommit 9db5d17e6aa10f622b3d9660767a922afe8f726d[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 14:52:03 2023 +0700
+
+    add waitress 2.1.2
+
+[33mcommit 76763121bb0c5b548885654dd5b1931a29c6cd45[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 01:01:31 2023 +0700
+
+    sss
+
+[33mcommit 2b071881b52810c2ae222c8463ee64ccf4e5f901[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 00:50:37 2023 +0700
+
+    delect
+
+[33mcommit 570f248507b0f64468787a653fdbb6f9841db2d1[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 00:47:48 2023 +0700
+
+    pip
+
+[33mcommit 02421148a5accb944f6cb610b058d5d0ef8406b0[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 00:41:21 2023 +0700
+
+    update requirements.txt
+
+[33mcommit 1d29cc594edbab1f6971d8e807f14069b480ad8f[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Mon Feb 6 00:32:45 2023 +0700
+
+    add file
+
+[33mcommit 0ae3d5c1f9399da843263b29f3d10ead4bd520ee[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Sun Feb 5 22:33:22 2023 +0700
+
+    add opencv
+
+[33mcommit eab0ee62ed6db5ed554a85fc27989572876a9b3b[m
+Author: Albert <benjaminalbert165812@gmail.com>
+Date:   Sun Feb 5 15:10:05 2023 +0700
+
+    first
