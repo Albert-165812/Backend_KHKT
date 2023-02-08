@@ -72,6 +72,22 @@ def ids():
     }
 
 
+@app.route('/data', methods=['GET'])
+@cross_origin(origin='*')
+def data():
+    study = []
+    for data in tables.find():
+        study.append({
+            "Lamquen": data['val_Lamquen'],
+            "Danhvan": data['val_Danhvan'],
+            "Tapdoc": data['val_Tapdoc'],
+            "Timvan": data['val_Timvan']
+        })
+    return {
+        "study": study
+    }
+
+
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')
 def data_lesson():
