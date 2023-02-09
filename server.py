@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask import request
+from flask_socketio import SocketIO, emit
 from pymongo import MongoClient
 import numpy as np
 import cv2
@@ -12,8 +13,10 @@ app = Flask(__name__)
 # APPLY FLASK CORS
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['SECRET_KEY'] = 'top-secret!'
+app.config['SESSION_TYPE'] = 'filesystem'
 app.config["URL_DB"] = "mongodb+srv://albert:162003@cluster0.ned4xp7.mongodb.net/?retryWrites=true&w=majority"
-
+socketio = SocketIO(app, cors_allowed_origins="*")
 # SETUP DB
 db_client = MongoClient(app.config["URL_DB"])
 db = db_client['khkt_db']
@@ -107,8 +110,13 @@ def data_lesson():
     }
 
 
+@socketio.on('message')
+def handle_message(data):
+    print('received message: ' + data["data"])
+
+
 # Start Backend
 if __name__ == '__main__':
     # from waitress import serve
-    # serve(app, host="0.0.0.0", port=6868)
-    app.run(host="0.0.0.0", port=6868)
+    # serve(app=socketio, host="0.0.0.0", port=6868)
+    socketio.run(app, host="0.0.0.0", port=6868)
