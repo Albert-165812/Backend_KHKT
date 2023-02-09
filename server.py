@@ -40,6 +40,11 @@ def nhandienkhuonmat_process():
     img_base64 = img_base64.replace("data:image/webp;base64,", "")
     img_detect = convectBase64toImg(img_base64)
     kq = detect(img_detect)
+    if (kq == None):
+        return {
+            "text_detect": "no detection"
+        }
+    emit_client_local("TexttoController", None, kq)
     return {
         "text_detect": kq
     }
@@ -110,9 +115,33 @@ def data_lesson():
     }
 
 
-@socketio.on('message')
+def emit_client_local(task, place, content):
+    data = {
+        "task": task,
+        "place": place,
+        "content": content
+    }
+    socketio.emit("message_client_local", data)
+
+
+def emit_client_web(task, place, content):
+    data = {
+        "task": task,
+        "place": place,
+        "content": content
+    }
+    socketio.emit("message_client_web", data)
+
+
+@socketio.on('server_client_web')
 def handle_message(data):
-    print('received message: ' + data["data"])
+    print("data client web: ", data)
+
+
+@socketio.on('server_client_local')
+def handle_message(data):
+    print("data client local: ", data)
+    emit_client_web(data["task"], data["place"], data["content"])
 
 
 # Start Backend
