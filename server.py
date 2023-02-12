@@ -49,37 +49,6 @@ def nhandienkhuonmat_process():
         "text_detect": kq
     }
 
-
-@app.route('/ids', methods=['GET'])
-@cross_origin(origin='*')
-def ids():
-    lessons = []
-    for id in tables.find():
-        id = str(ObjectId(id['_id']))
-        lesson = tables.find_one({"_id": ObjectId(id)})['title']
-        lessons.append({
-            "id": id,
-            "lesson": lesson
-        })
-    data = tables.find_one({"_id": ObjectId(lessons[0]["id"])})
-    Title = data['title']
-    Lamquen = data['val_Lamquen']
-    Danhvan = data['val_Danhvan']
-    Tapdoc = data['val_Tapdoc']
-    Timvan = data['val_Timvan']
-    return {
-        "lessons": lessons,
-        "data": {
-            "title": Title,
-            "lamquen": Lamquen,
-            "danhvan": Danhvan,
-            "tapdoc": Tapdoc,
-            "timvan": Timvan
-        }
-
-    }
-
-
 @app.route('/data', methods=['GET'])
 @cross_origin(origin='*')
 def data():
