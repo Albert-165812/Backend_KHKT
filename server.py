@@ -44,7 +44,7 @@ def nhandienkhuonmat_process():
         return {
             "text_detect": "no detection"
         }
-    emit_client_local("TexttoController", None, kq)
+    emit_client_local("TextoAlertWeb", "Page_detect", kq)
     return {
         "text_detect": kq
     }
@@ -84,6 +84,14 @@ def ids():
 @cross_origin(origin='*')
 def data():
     study = []
+    ids = []
+    for id in tables.find():
+        id = str(ObjectId(id['_id']))
+        lesson = tables.find_one({"_id": ObjectId(id)})['title']
+        ids.append({
+            "id": id,
+            "lesson": lesson
+        })
     for data in tables.find():
         study.append({
             "Lamquen": data['val_Lamquen'],
@@ -92,6 +100,7 @@ def data():
             "Timvan": data['val_Timvan']
         })
     return {
+        "ids":ids,
         "study": study
     }
 
