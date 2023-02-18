@@ -1,3 +1,4 @@
+import json
 from flask import Flask
 from flask_cors import CORS, cross_origin
 from flask import request
@@ -17,10 +18,59 @@ app.config['SECRET_KEY'] = 'top-secret!'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config["URL_DB"] = "mongodb+srv://albert:162003@cluster0.ned4xp7.mongodb.net/?retryWrites=true&w=majority"
 socketio = SocketIO(app, cors_allowed_origins="*")
+
 # SETUP DB
 db_client = MongoClient(app.config["URL_DB"])
 db = db_client['khkt_db']
 tables = db['khkt_tables']
+
+print("wait data")
+lesson = []
+Kechuyen = []
+Danhvan = []
+Ontap = []
+ids = []
+chuong = []
+for id in tables.find():
+    id = str(ObjectId(id['_id']))
+    if (len(ids) == 0):
+        ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
+        chuong.append({
+            "chuong": "chuong "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "study":[],
+        })
+    if (tables.find_one({"_id": ObjectId(id)})['chuong'] not in str(ids)):
+        ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
+        chuong.append({
+            "chuong": "chuong "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "study":[],
+        })
+for id in tables.find():
+    id = str(ObjectId(id['_id']))
+    for i in range(0, len(tables.find_one({"_id": ObjectId(id)})['data_lesson'])):
+        if ("Lamquen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
+            Lamquen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+        if ("Kechuyen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
+            Kechuyen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+        if ("Danhvan" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
+            Danhvan = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+        if ("Ontap" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
+            Ontap = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+    chuong[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study"].append({
+        "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
+        "study": {
+            "Lamquen": Lamquen,
+            "Danhvan": Danhvan,
+            "Kechuyen": Kechuyen,
+            "Ontap": Ontap
+        }
+    })
+    Lamquen = ''
+    Danhvan = ''
+    Kechuyen = ''
+    Ontap = ''
+
+print("done data")
 
 
 def convectBase64toImg(img):
@@ -49,28 +99,14 @@ def nhandienkhuonmat_process():
         "text_detect": kq
     }
 
+
 @app.route('/data', methods=['GET'])
 @cross_origin(origin='*')
 def data():
-    study = []
-    ids = []
-    for id in tables.find():
-        id = str(ObjectId(id['_id']))
-        lesson = tables.find_one({"_id": ObjectId(id)})['title']
-        ids.append({
-            "id": id,
-            "lesson": lesson
-        })
-    for data in tables.find():
-        study.append({
-            "Lamquen": data['val_Lamquen'],
-            "Danhvan": data['val_Danhvan'],
-            "Tapdoc": data['val_Tapdoc'],
-            "Timvan": data['val_Timvan']
-        })
+    global ids, chuong
     return {
-        "ids":ids,
-        "study": study
+        "ids": ids,
+        "listchuong": chuong,
     }
 
 
@@ -78,19 +114,7 @@ def data():
 @cross_origin(origin='*')
 def data_lesson():
     id = request.json['id']
-    data = tables.find_one({"_id": ObjectId(id)})
-    Title = data['title']
-    Lamquen = data['val_Lamquen']
-    Danhvan = data['val_Danhvan']
-    Tapdoc = data['val_Tapdoc']
-    Timvan = data['val_Timvan']
-    return {
-        "title": Title,
-        "lamquen": Lamquen,
-        "danhvan": Danhvan,
-        "tapdoc": Tapdoc,
-        "timvan": Timvan
-    }
+    return "pass"
 
 
 def emit_client_local(task, place, content):

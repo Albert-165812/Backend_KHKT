@@ -1,0 +1,16 @@
+{
+    "chuong":{
+        "tenchuong":"",
+        "baihoc":[
+            {
+                "tenbaihoc":"",
+                "noidung":{
+                    "Lamquen":[],
+                    "Danhvan":[],
+                    "Kechuyen":[],
+                    "Ontap":[]
+                }
+            }
+        ]
+    }
+}
