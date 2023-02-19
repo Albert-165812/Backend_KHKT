@@ -30,20 +30,33 @@ Kechuyen = []
 Danhvan = []
 Ontap = []
 ids = []
+list_id = []
 chuong = []
+dt_id = []
 for id in tables.find():
     id = str(ObjectId(id['_id']))
+    dt_id.append({
+        "id":id
+    })
     if (len(ids) == 0):
         ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
         chuong.append({
-            "chuong": "chuong "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
             "study":[],
+        })
+        list_id.append({
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "ids":[]
         })
     if (tables.find_one({"_id": ObjectId(id)})['chuong'] not in str(ids)):
         ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
         chuong.append({
-            "chuong": "chuong "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
             "study":[],
+        })
+        list_id.append({
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "ids":[]
         })
 for id in tables.find():
     id = str(ObjectId(id['_id']))
@@ -64,6 +77,10 @@ for id in tables.find():
             "Kechuyen": Kechuyen,
             "Ontap": Ontap
         }
+    })
+    list_id[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["ids"].append({
+        "id":id,
+        "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
     })
     Lamquen = ''
     Danhvan = ''
@@ -103,9 +120,10 @@ def nhandienkhuonmat_process():
 @app.route('/data', methods=['GET'])
 @cross_origin(origin='*')
 def data():
-    global ids, chuong
+    global dt_id,list_id, chuong
     return {
-        "ids": ids,
+        "list_id": dt_id,
+        "ids": list_id,
         "listchuong": chuong,
     }
 
@@ -113,7 +131,17 @@ def data():
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')
 def data_lesson():
+    global list_id,chuong
     id = request.json['id']
+    for i in list_id:
+        for e in i["ids"]:
+            if(id in str(e)):
+                print(i["ids"][i["ids"].index(e)]["baihoc"],i["chuong"])
+                for item in chuong:
+                    if(item["chuong"]==i["chuong"]):
+                        for itbaihoc in item["study"]:
+                            if(itbaihoc["baihoc"]==i["ids"][i["ids"].index(e)]["baihoc"]):
+                                return itbaihoc
     return "pass"
 
 
