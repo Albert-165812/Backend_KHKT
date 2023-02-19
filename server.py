@@ -33,6 +33,7 @@ ids = []
 list_id = []
 chuong = []
 dt_id = []
+
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     dt_id.append({
@@ -57,7 +58,7 @@ for id in tables.find():
         list_id.append({
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
             "ids":[]
-        })
+        }) 
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     for i in range(0, len(tables.find_one({"_id": ObjectId(id)})['data_lesson'])):
@@ -179,3 +180,4 @@ if __name__ == '__main__':
     # from waitress import serve
     # serve(app=socketio, host="0.0.0.0", port=6868)
     socketio.run(app, host="0.0.0.0", port=6868)
+
