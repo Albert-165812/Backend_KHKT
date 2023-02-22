@@ -11,9 +11,13 @@ from bson import ObjectId
 from handle.detect import detect
 app = Flask(__name__)
 
+
 # APPLY FLASK CORS
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['allowedHeaders']= ['sessionId', 'Content-Type'],
+app.config['exposedHeaders']= ['sessionId'],
+app.config['Access-Control-Allow-Origin'] = '*'
 app.config['SECRET_KEY'] = 'top-secret!'
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config["URL_DB"] = "mongodb+srv://albert:162003@cluster0.ned4xp7.mongodb.net/?retryWrites=true&w=majority"
@@ -26,50 +30,78 @@ tables = db['khkt_tables']
 
 print("wait data")
 lesson = []
+Lamquen = []
 Kechuyen = []
 Danhvan = []
 Ontap = []
+img_Lamquen = []
+img_Kechuyen = []
+img_Danhvan = []
+img_Ontap = []
 ids = []
 list_id = []
 chuong = []
 dt_id = []
-
+list_link_img = []
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     dt_id.append({
-        "id":id
+        "id": id
     })
     if (len(ids) == 0):
         ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
         chuong.append({
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "study":[],
+            "study": [],
         })
         list_id.append({
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "ids":[]
+            "ids": []
+        })
+        list_link_img.append({
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "study_img": [],
         })
     if (tables.find_one({"_id": ObjectId(id)})['chuong'] not in str(ids)):
         ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
         chuong.append({
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "study":[],
+            "study": [],
         })
         list_id.append({
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "ids":[]
-        }) 
+            "ids": []
+        })
+        list_link_img.append({
+            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
+            "study_img": [],
+        })
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     for i in range(0, len(tables.find_one({"_id": ObjectId(id)})['data_lesson'])):
         if ("Lamquen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Lamquen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+            if (Lamquen["Lamquen"] != ""):
+                for lL in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Lamquen"]:
+                    img_Lamquen.append(lL["img"])
         if ("Kechuyen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Kechuyen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+            if (Kechuyen["Kechuyen"] != ""):
+                for lK in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Kechuyen"]:
+                    for lC in lK["content"]:
+                        img_Kechuyen.append(lC["img"])
         if ("Danhvan" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Danhvan = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+            if (Danhvan["Danhvan"] != ""):
+                for lD in tables.find_one({"_id": ObjectId(id)})[
+                    'data_lesson'][i]["Danhvan"]:
+                    img_Danhvan.append(lD["img"])
         if ("Ontap" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Ontap = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
+            if(Ontap["Ontap"] != ""):
+                for lO in tables.find_one({"_id": ObjectId(id)})[
+                'data_lesson'][i]["Ontap"]:
+                    img_Ontap.append(lO["img"])
     chuong[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study"].append({
         "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
         "study": {
@@ -79,14 +111,27 @@ for id in tables.find():
             "Ontap": Ontap
         }
     })
+    list_link_img[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study_img"].append({
+        "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
+        "study_img": {
+            "img_Lamquen": img_Lamquen,
+            "img_Danhvan": img_Danhvan,
+            "img_Kechuyen": img_Kechuyen,
+            "img_Ontap": img_Ontap
+        }
+    })
     list_id[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["ids"].append({
-        "id":id,
+        "id": id,
         "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
     })
     Lamquen = ''
     Danhvan = ''
     Kechuyen = ''
     Ontap = ''
+    img_Lamquen = []
+    img_Kechuyen = []
+    img_Danhvan = []
+    img_Ontap = []
 
 print("done data")
 
@@ -121,8 +166,9 @@ def nhandienkhuonmat_process():
 @app.route('/data', methods=['GET'])
 @cross_origin(origin='*')
 def data():
-    global dt_id,list_id, chuong
+    global dt_id, list_id, chuong, list_link_img
     return {
+        "list_link_img": list_link_img,
         "list_id": dt_id,
         "ids": list_id,
         "listchuong": chuong,
@@ -132,16 +178,16 @@ def data():
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')
 def data_lesson():
-    global list_id,chuong
+    global list_id, chuong
     id = request.json['id']
     for i in list_id:
         for e in i["ids"]:
-            if(id in str(e)):
-                print(i["ids"][i["ids"].index(e)]["baihoc"],i["chuong"])
+            if (id in str(e)):
+                print(i["ids"][i["ids"].index(e)]["baihoc"], i["chuong"])
                 for item in chuong:
-                    if(item["chuong"]==i["chuong"]):
+                    if (item["chuong"] == i["chuong"]):
                         for itbaihoc in item["study"]:
-                            if(itbaihoc["baihoc"]==i["ids"][i["ids"].index(e)]["baihoc"]):
+                            if (itbaihoc["baihoc"] == i["ids"][i["ids"].index(e)]["baihoc"]):
                                 return itbaihoc
     return "pass"
 
@@ -180,4 +226,3 @@ if __name__ == '__main__':
     # from waitress import serve
     # serve(app=socketio, host="0.0.0.0", port=6868)
     socketio.run(app, host="0.0.0.0", port=6868)
-
