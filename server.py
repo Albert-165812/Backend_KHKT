@@ -9,6 +9,9 @@ import cv2
 import base64
 from bson import ObjectId
 from handle.detect import detect
+from urllib.parse import unquote
+import os
+from PIL import Image
 app = Flask(__name__)
 
 
@@ -43,6 +46,7 @@ list_id = []
 chuong = []
 dt_id = []
 list_link_img = []
+list_img = []
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     dt_id.append({
@@ -83,25 +87,25 @@ for id in tables.find():
             Lamquen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Lamquen["Lamquen"] != ""):
                 for lL in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Lamquen"]:
-                    img_Lamquen.append(lL["img"])
+                    img_Lamquen.append(unquote(lL["img"]))
         if ("Kechuyen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Kechuyen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Kechuyen["Kechuyen"] != ""):
                 for lK in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Kechuyen"]:
                     for lC in lK["content"]:
-                        img_Kechuyen.append(lC["img"])
+                        img_Kechuyen.append(unquote(lC["img"]))
         if ("Danhvan" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Danhvan = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Danhvan["Danhvan"] != ""):
                 for lD in tables.find_one({"_id": ObjectId(id)})[
                     'data_lesson'][i]["Danhvan"]:
-                    img_Danhvan.append(lD["img"])
+                    img_Danhvan.append(unquote(lD["img"]))
         if ("Ontap" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Ontap = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if(Ontap["Ontap"] != ""):
                 for lO in tables.find_one({"_id": ObjectId(id)})[
                 'data_lesson'][i]["Ontap"]:
-                    img_Ontap.append(lO["img"])
+                    img_Ontap.append(unquote(lO["img"]))
     chuong[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study"].append({
         "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
         "study": {
@@ -173,7 +177,48 @@ def data():
         "ids": list_id,
         "listchuong": chuong,
     }
-
+    
+@app.route('/image', methods=['POST','GET'])
+@cross_origin(origin='*')
+def image():
+    global list_link_img, list_img
+    for i in list_link_img:
+        for j in i["study_img"]:
+            if(len(j["study_img"]['img_Lamquen']) > 0):
+                for k in range(0,len(j["study_img"]['img_Lamquen'])):
+                    chuong = j["study_img"]['img_Lamquen'][k].split("/")[-3]
+                    bai = j["study_img"]['img_Lamquen'][k].split("/")[-2]
+                    ten = j["study_img"]['img_Lamquen'][k].split("/")[-1]
+                    list_img.extend(chuong+"/"+bai+"/"+ten)
+                    # print(chuong+bai+ten)
+            if(len(j["study_img"]['img_Danhvan']) > 0):
+                for k in range(0,len(j["study_img"]['img_Danhvan'])):
+                    print(j["study_img"]['img_Danhvan'][k])
+                    # chuong = j["study_img"]['img_Danhvan'][k].split("/")[-3]
+                    # bai = j["study_img"]['img_Danhvan'][k].split("/")[-2]
+                    # ten = j["study_img"]['img_Danhvan'][k].split("/")[-1]
+                    # list_img.extend("/"+bai+"/"+ten)
+            if(len(j["study_img"]['img_Kechuyen']) > 0):
+                for k in range(0,len(j["study_img"]['img_Kechuyen'])):
+                    chuong = j["study_img"]['img_Kechuyen'][k].split("/")[-3]
+                    bai = j["study_img"]['img_Kechuyen'][k].split("/")[-2]
+                    ten = j["study_img"]['img_Kechuyen'][k].split("/")[-1]
+                    list_img.extend(chuong+"/"+bai+"/"+ten)
+            if(len(j["study_img"]['img_Ontap']) > 0):
+                for k in range(0,len(j["study_img"]['img_Ontap'])):
+                    chuong = j["study_img"]['img_Ontap'][k].split("/")[-3]
+                    bai = j["study_img"]['img_Ontap'][k].split("/")[-2]
+                    ten = j["study_img"]['img_Ontap'][k].split("/")[-1]
+                    list_img.extend(chuong+"/"+bai+"/"+ten)
+                    
+    print(len(list_img))
+    file = ""
+    location = os.getcwd() + '/src/image/'
+    print(os.path.join(location, file))
+    print(list_img)
+    return {
+        "list_link_img": list_img
+    }
 
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')
