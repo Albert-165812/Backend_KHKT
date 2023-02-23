@@ -1,5 +1,5 @@
 import json
-from flask import Flask
+from flask import Flask,send_file
 from flask_cors import CORS, cross_origin
 from flask import request
 from flask_socketio import SocketIO, emit
@@ -11,7 +11,7 @@ from bson import ObjectId
 from handle.detect import detect
 from urllib.parse import unquote
 import os
-from PIL import Image
+
 app = Flask(__name__)
 
 
@@ -23,6 +23,7 @@ app.config['exposedHeaders']= ['sessionId'],
 app.config['Access-Control-Allow-Origin'] = '*'
 app.config['SECRET_KEY'] = 'top-secret!'
 app.config['SESSION_TYPE'] = 'filesystem'
+app.config['UPLOADED_PHOTOS_DEST'] = 'src/image/'
 app.config["URL_DB"] = "mongodb+srv://albert:162003@cluster0.ned4xp7.mongodb.net/?retryWrites=true&w=majority"
 socketio = SocketIO(app, cors_allowed_origins="*")
 
@@ -45,8 +46,7 @@ ids = []
 list_id = []
 chuong = []
 dt_id = []
-list_link_img = []
-list_img = []
+
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     dt_id.append({
@@ -62,10 +62,6 @@ for id in tables.find():
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
             "ids": []
         })
-        list_link_img.append({
-            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "study_img": [],
-        })
     if (tables.find_one({"_id": ObjectId(id)})['chuong'] not in str(ids)):
         ids.append(tables.find_one({"_id": ObjectId(id)})['chuong'])
         chuong.append({
@@ -76,10 +72,6 @@ for id in tables.find():
             "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
             "ids": []
         })
-        list_link_img.append({
-            "chuong": "Chương "+str(ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])+1),
-            "study_img": [],
-        })
 for id in tables.find():
     id = str(ObjectId(id['_id']))
     for i in range(0, len(tables.find_one({"_id": ObjectId(id)})['data_lesson'])):
@@ -87,25 +79,26 @@ for id in tables.find():
             Lamquen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Lamquen["Lamquen"] != ""):
                 for lL in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Lamquen"]:
-                    img_Lamquen.append(unquote(lL["img"]))
+                    lL["img"] = unquote(lL["img"])[85:]
         if ("Kechuyen" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Kechuyen = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Kechuyen["Kechuyen"] != ""):
                 for lK in tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]["Kechuyen"]:
                     for lC in lK["content"]:
-                        img_Kechuyen.append(unquote(lC["img"]))
+                        lC["img"] = unquote(lC["img"])[85:]
         if ("Danhvan" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Danhvan = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Danhvan["Danhvan"] != ""):
                 for lD in tables.find_one({"_id": ObjectId(id)})[
                     'data_lesson'][i]["Danhvan"]:
+                    lD["img"] = unquote(lD["img"])[85:]
                     img_Danhvan.append(unquote(lD["img"]))
         if ("Ontap" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Ontap = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if(Ontap["Ontap"] != ""):
                 for lO in tables.find_one({"_id": ObjectId(id)})[
                 'data_lesson'][i]["Ontap"]:
-                    img_Ontap.append(unquote(lO["img"]))
+                    lO["img"] = unquote(lO["img"])[85:]
     chuong[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study"].append({
         "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
         "study": {
@@ -113,15 +106,6 @@ for id in tables.find():
             "Danhvan": Danhvan,
             "Kechuyen": Kechuyen,
             "Ontap": Ontap
-        }
-    })
-    list_link_img[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study_img"].append({
-        "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
-        "study_img": {
-            "img_Lamquen": img_Lamquen,
-            "img_Danhvan": img_Danhvan,
-            "img_Kechuyen": img_Kechuyen,
-            "img_Ontap": img_Ontap
         }
     })
     list_id[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["ids"].append({
@@ -170,55 +154,17 @@ def nhandienkhuonmat_process():
 @app.route('/data', methods=['GET'])
 @cross_origin(origin='*')
 def data():
-    global dt_id, list_id, chuong, list_link_img
+    global dt_id, list_id, chuong
     return {
-        "list_link_img": list_link_img,
         "list_id": dt_id,
         "ids": list_id,
         "listchuong": chuong,
     }
     
-@app.route('/image', methods=['POST','GET'])
+@app.route('/src/image/<chuong>/<bai>/<path:filename>')
 @cross_origin(origin='*')
-def image():
-    global list_link_img, list_img
-    for i in list_link_img:
-        for j in i["study_img"]:
-            if(len(j["study_img"]['img_Lamquen']) > 0):
-                for k in range(0,len(j["study_img"]['img_Lamquen'])):
-                    chuong = j["study_img"]['img_Lamquen'][k].split("/")[-3]
-                    bai = j["study_img"]['img_Lamquen'][k].split("/")[-2]
-                    ten = j["study_img"]['img_Lamquen'][k].split("/")[-1]
-                    list_img.extend(chuong+"/"+bai+"/"+ten)
-                    # print(chuong+bai+ten)
-            if(len(j["study_img"]['img_Danhvan']) > 0):
-                for k in range(0,len(j["study_img"]['img_Danhvan'])):
-                    print(j["study_img"]['img_Danhvan'][k])
-                    # chuong = j["study_img"]['img_Danhvan'][k].split("/")[-3]
-                    # bai = j["study_img"]['img_Danhvan'][k].split("/")[-2]
-                    # ten = j["study_img"]['img_Danhvan'][k].split("/")[-1]
-                    # list_img.extend("/"+bai+"/"+ten)
-            if(len(j["study_img"]['img_Kechuyen']) > 0):
-                for k in range(0,len(j["study_img"]['img_Kechuyen'])):
-                    chuong = j["study_img"]['img_Kechuyen'][k].split("/")[-3]
-                    bai = j["study_img"]['img_Kechuyen'][k].split("/")[-2]
-                    ten = j["study_img"]['img_Kechuyen'][k].split("/")[-1]
-                    list_img.extend(chuong+"/"+bai+"/"+ten)
-            if(len(j["study_img"]['img_Ontap']) > 0):
-                for k in range(0,len(j["study_img"]['img_Ontap'])):
-                    chuong = j["study_img"]['img_Ontap'][k].split("/")[-3]
-                    bai = j["study_img"]['img_Ontap'][k].split("/")[-2]
-                    ten = j["study_img"]['img_Ontap'][k].split("/")[-1]
-                    list_img.extend(chuong+"/"+bai+"/"+ten)
-                    
-    print(len(list_img))
-    file = ""
-    location = os.getcwd() + '/src/image/'
-    print(os.path.join(location, file))
-    print(list_img)
-    return {
-        "list_link_img": list_img
-    }
+def get_image(chuong,bai,filename):
+    return send_file(os.getcwd()+'/src/image/'+chuong+'/'+bai+'/'+filename, mimetype='image/jpeg')
 
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')

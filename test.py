@@ -1,0 +1,1 @@
+print("https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/chương 5/bài 4/lúa.jpg"[85:])
