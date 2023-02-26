@@ -1,5 +1,5 @@
 import json
-from flask import Flask,send_file
+from flask import Flask, send_file
 from flask_cors import CORS, cross_origin
 from flask import request
 from flask_socketio import SocketIO, emit
@@ -8,7 +8,7 @@ import numpy as np
 import cv2
 import base64
 from bson import ObjectId
-from handle.detect import detect
+from handle.detect import YoloDetectImg
 from urllib.parse import unquote
 import os
 
@@ -18,8 +18,8 @@ app = Flask(__name__)
 # APPLY FLASK CORS
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['allowedHeaders']= ['sessionId', 'Content-Type'],
-app.config['exposedHeaders']= ['sessionId'],
+app.config['allowedHeaders'] = ['sessionId', 'Content-Type'],
+app.config['exposedHeaders'] = ['sessionId'],
 app.config['Access-Control-Allow-Origin'] = '*'
 app.config['SECRET_KEY'] = 'top-secret!'
 app.config['SESSION_TYPE'] = 'filesystem'
@@ -90,14 +90,14 @@ for id in tables.find():
             Danhvan = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
             if (Danhvan["Danhvan"] != ""):
                 for lD in tables.find_one({"_id": ObjectId(id)})[
-                    'data_lesson'][i]["Danhvan"]:
+                        'data_lesson'][i]["Danhvan"]:
                     lD["img"] = unquote(lD["img"])[85:]
                     img_Danhvan.append(unquote(lD["img"]))
         if ("Ontap" in str(tables.find_one({"_id": ObjectId(id)})['data_lesson'][i])):
             Ontap = tables.find_one({"_id": ObjectId(id)})['data_lesson'][i]
-            if(Ontap["Ontap"] != ""):
+            if (Ontap["Ontap"] != ""):
                 for lO in tables.find_one({"_id": ObjectId(id)})[
-                'data_lesson'][i]["Ontap"]:
+                        'data_lesson'][i]["Ontap"]:
                     lO["img"] = unquote(lO["img"])[85:]
     chuong[ids.index(tables.find_one({"_id": ObjectId(id)})['chuong'])]["study"].append({
         "baihoc": tables.find_one({"_id": ObjectId(id)})['baihoc'],
@@ -140,7 +140,7 @@ def nhandienkhuonmat_process():
     img_base64 = request.json['data_base64']
     img_base64 = img_base64.replace("data:image/webp;base64,", "")
     img_detect = convectBase64toImg(img_base64)
-    kq = detect(img_detect)
+    kq = YoloDetectImg().detect(img_detect, 1)
     if (kq == None):
         return {
             "text_detect": "no detection"
@@ -160,11 +160,39 @@ def data():
         "ids": list_id,
         "listchuong": chuong,
     }
-    
+
+
+@app.route('/page_current', methods=['POST'])
+@cross_origin(origin='*')
+def page_current():
+    id = request.json["page"]
+    data = {
+        "task": "alertPageCurr",
+        "place": "none",
+        "content": id,
+    }
+    emit_page_curr(data["task"], data["place"], data["content"])
+    return "done"
+
+
+@app.route('/state_choosen', methods=['POST'])
+@cross_origin(origin='*')
+def choosen_current():
+    id = request.json["state"]
+    data = {
+        "task": "alertStateChoosen",
+        "place": "none",
+        "content": id,
+    }
+    emit_page_curr(data["task"], data["place"], data["content"])
+    return "done"
+
+
 @app.route('/src/image/<chuong>/<bai>/<path:filename>')
 @cross_origin(origin='*')
-def get_image(chuong,bai,filename):
+def get_image(chuong, bai, filename):
     return send_file(os.getcwd()+'/src/image/'+chuong+'/'+bai+'/'+filename, mimetype='image/jpeg')
+
 
 @app.route('/data_lesson', methods=['POST'])
 @cross_origin(origin='*')
@@ -189,6 +217,7 @@ def emit_client_local(task, place, content):
         "place": place,
         "content": content
     }
+    print(data)
     socketio.emit("message_client_local", data)
 
 
@@ -198,7 +227,18 @@ def emit_client_web(task, place, content):
         "place": place,
         "content": content
     }
+    print(data)
     socketio.emit("message_client_web", data)
+
+
+def emit_page_curr(task, place, content):
+    data = {
+        "task": task,
+        "place": place,
+        "content": content
+    }
+    print(data)
+    socketio.emit("message_page_curr", data)
 
 
 @socketio.on('server_client_web')
@@ -210,6 +250,12 @@ def handle_message(data):
 def handle_message(data):
     print("data client local: ", data)
     emit_client_web(data["task"], data["place"], data["content"])
+
+
+@socketio.on('page_curr')
+def handle_message(data):
+    print("page_curr: ", data)
+    # emit_page_curr(data["task"], data["place"], data["content"])
 
 
 # Start Backend
