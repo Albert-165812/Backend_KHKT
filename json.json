@@ -1,16 +1,1178 @@
-{
-    "chuong":{
-        "tenchuong":"",
-        "baihoc":[
-            {
-                "tenbaihoc":"",
-                "noidung":{
-                    "Lamquen":[],
-                    "Danhvan":[],
-                    "Kechuyen":[],
-                    "Ontap":[]
-                }
-            }
-        ]
+[{
+  "_id": {
+    "$oid": "63ecf9dbb699834c498f2595"
+  },
+  "chuong": "Chương 1",
+  "baihoc": "Bài 1",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "Lá",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%201/l%C3%A1%20c%C3%A2y.jpg"
+        },
+        {
+          "text": "Bà",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%201/b%C3%A0.jpg"
+        },
+        {
+          "text": "Gà",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%201/g%C3%A0.jpg"
+        },
+        {
+          "text": "Ba",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%201/ba.jpg"
+        }
+      ]
     }
-}
+  ]
+},{
+  "_id": {
+    "$oid": "63ee25beb228938a955b2fa4"
+  },
+  "chuong": "Chương 1",
+  "baihoc": "Bài 2",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "bàn",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%202/b%C3%A0n.jpg"
+        },
+        {
+          "text": "bóng",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%202/b%C3%B3ng.jpg"
+        },
+        {
+          "text": "bé",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%202/b%C3%A9.jpg"
+        },
+        {
+          "text": "ba ba",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%202/baba.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "b",
+          "text_cach_danhvan": "b|a=>ba",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%202/ba-1.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ee26e7b228938a955b2fa5"
+  },
+  "chuong": "Chương 1",
+  "baihoc": "Bài 3",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "cò",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/c%C3%B2.jpg"
+        },
+        {
+          "text": "cáo",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/c%C3%A1o.jpg"
+        },
+        {
+          "text": "cam",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/cam.jpg"
+        },
+        {
+          "text": "cua",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/cua.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "c",
+          "text_cach_danhvan": "c|a=>ca",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/c%C3%A1i-ca.jpg"
+        },
+        {
+          "text": "`",
+          "text_cach_danhvan": "c|a=>cà",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/c%C3%A0-t%C3%ADm.jpg"
+        },
+        {
+          "text": "´",
+          "text_cach_danhvan": "c|a=>cá",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%203/c%C3%A1.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ee2a09b228938a955b2fa7"
+  },
+  "chuong": "Chương 1",
+  "baihoc": "Bài 5",
+  "data_lesson": [
+    {
+      "Kechuyen": [
+        {
+          "title": "Cá bò",
+          "content": [
+            {
+              "text": "Cá bò mẹ bảo con ở nhà.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/k%E1%BB%83-chuy%E1%BB%87n-1.jpg"
+            },
+            {
+              "text": "Cá cờ rủ cá bồ đi nghe nhạc.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/k%E1%BB%83-chuy%E1%BB%87n-2.jpg"
+            },
+            {
+              "text": "Cá bò và cá cờ nhìn thấy bồ nông.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/k%E1%BB%83-chuy%E1%BB%87n-3.jpg"
+            },
+            {
+              "text": "Cá bò xin lỗi mẹ.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/k%E1%BB%83-chuy%E1%BB%87n-4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Ontap": [
+        {
+          "ten_bai_hoc": "a",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/baba.jpg",
+          "chu_cua_hinh": "ba ba"
+        },
+        {
+          "ten_bai_hoc": "b",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/b%C3%B2.jpg",
+          "chu_cua_hinh": "bò"
+        },
+        {
+          "ten_bai_hoc": "c",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/c%C3%A1i-ca.jpg",
+          "chu_cua_hinh": "ca"
+        },
+        {
+          "ten_bai_hoc": "`",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/c%C3%A0-t%C3%ADm.jpg",
+          "chu_cua_hinh": "cà"
+        },
+        {
+          "ten_bai_hoc": "´",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/c%C3%A1.jpg",
+          "chu_cua_hinh": "cá"
+        },
+        {
+          "ten_bai_hoc": "o",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/c%C3%B2.jpg",
+          "chu_cua_hinh": "cò"
+        },
+        {
+          "ten_bai_hoc": "?",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%205/c%E1%BB%8F.jpg",
+          "chu_cua_hinh": "cỏ"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef8ffefe4a90b2c03fc731"
+  },
+  "chuong": "Chương 1",
+  "baihoc": "Bài 4",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "thỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/th%E1%BB%8F.jpg"
+        },
+        {
+          "text": "cọ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/c%C3%A2y-c%E1%BB%8D.jpg"
+        },
+        {
+          "text": "chó",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/con-ch%C3%B3.jpg"
+        },
+        {
+          "text": "cỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/c%E1%BB%8F.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "o",
+          "text_cach_danhvan": "b|o=>bò",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/b%C3%B2.jpg"
+        },
+        {
+          "text": "?",
+          "text_cach_danhvan": "c|o=>cỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/d0f2a0314eec589ef5dcb1f1ac225778e3deae62/Chuong%201/Bai%204/c%E1%BB%8F.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef932efe4a90b2c03fc732"
+  },
+  "chuong": "Chương 2",
+  "baihoc": "Bài 1",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "bờ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/b%E1%BB%9D.jpg"
+        },
+        {
+          "text": "bọ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/con-b%E1%BB%8D.jpg"
+        },
+        {
+          "text": "cá cờ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/c%C3%A1-c%E1%BB%9D%20(1).jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ơ",
+          "text_cach_danhvan": "b|ơ=>bơ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/tr%C3%A1i-b%C6%A1.jpg"
+        },
+        {
+          "text": ".",
+          "text_cach_danhvan": "c|o=>cọ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/c%C3%A2y-c%E1%BB%8D-1.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef93bcfe4a90b2c03fc733"
+  },
+  "chuong": "Chương 2",
+  "baihoc": "Bài 2",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "ô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/%C3%B4.jpg"
+        },
+        {
+          "text": "cổ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/c%E1%BB%95.jpg"
+        },
+        {
+          "text": "bố",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/b%E1%BB%91.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ô",
+          "text_cach_danhvan": "c|ô=>cô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/c%C3%B4.jpg"
+        },
+        {
+          "text": "~",
+          "text_cach_danhvan": "c|ô=>cỗ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/c%E1%BB%97.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef9438fe4a90b2c03fc734"
+  },
+  "chuong": "Chương 2",
+  "baihoc": "Bài 3",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "vỡ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%E1%BB%A1.jpg"
+        },
+        {
+          "text": "vỗ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%E1%BB%97.jpg"
+        },
+        {
+          "text": "võ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%C3%B5.jpg"
+        },
+        {
+          "text": "vỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%E1%BB%8F.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "v",
+          "text_cach_danhvan": "v|ơ=>vở",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%E1%BB%9F.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef94cdfe4a90b2c03fc735"
+  },
+  "chuong": "Chương 2",
+  "baihoc": "Bài 4",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "vẽ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/v%E1%BA%BD.jpg"
+        },
+        {
+          "text": "bê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/b%C3%AA.jpg"
+        },
+        {
+          "text": "vé",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/v%C3%A9.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "e",
+          "text_cach_danhvan": "b|e=>bé",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/b%C3%A9.jpg"
+        },
+        {
+          "text": "ê",
+          "text_cach_danhvan": "b|ê=>bế",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/b%E1%BA%BF.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ef986efe4a90b2c03fc736"
+  },
+  "chuong": "Chương 2",
+  "baihoc": "Bài 5",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "bơ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/tr%C3%A1i-b%C6%A1.jpg"
+        },
+        {
+          "text": "bọ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%201/con-b%E1%BB%8D.jpg"
+        },
+        {
+          "text": "ô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/%C3%B4.jpg"
+        },
+        {
+          "text": "cỗ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%202/c%E1%BB%97.jpg"
+        },
+        {
+          "text": "vỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%203/v%E1%BB%8F.jpg"
+        },
+        {
+          "text": "bé",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/b%C3%A9.jpg"
+        },
+        {
+          "text": "bê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%204/b%C3%AA.jpg"
+        }
+      ]
+    },
+    {
+      "Kechuyen": [
+        {
+          "title": "Bé và bà",
+          "content": [
+            {
+              "text": "Bà thường đọc truyện cho Na nghe.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-2.1.jpg"
+            },
+            {
+              "text": "Cả nhà chăm sóc bà khi bà bị bệnh.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-2.2.jpg"
+            },
+            {
+              "text": "Bà dần khỏe lên.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-2.3.jpg"
+            },
+            {
+              "text": "Nhờ Na và cả nhà, bà khỏi bệnh.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/407ced71248260eac85c9aca52684fcc523c8392/ch%C6%B0%C6%A1ng%202/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-2.4.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f1aebb789018a5ab577ffa"
+  },
+  "chuong": "Chương 3",
+  "baihoc": "Bài 1",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "dê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%201/con-d%C3%AA.jpg"
+        },
+        {
+          "text": "dẻ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%201/d%E1%BA%BB.jpg"
+        },
+        {
+          "text": "bờ đê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%201/b%E1%BB%9D-%C4%91%C3%AA.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "d",
+          "text_cach_danhvan": "d|ê=>dế",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%201/con-d%E1%BA%BF.jpg"
+        },
+        {
+          "text": "đ",
+          "text_cach_danhvan": "đ|ô=>đỗ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%201/%C4%91%E1%BB%97.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f1af50789018a5ab577ffb"
+  },
+  "chuong": "Chương 3",
+  "baihoc": "Bài 2",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "dì",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/d%C3%AC.jpg"
+        },
+        {
+          "text": "kê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/k%C3%AA.jpg"
+        },
+        {
+          "text": "bí đỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/b%C3%AD-%C4%91%E1%BB%8F.jpg"
+        },
+        {
+          "text": "ví da",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/v%C3%AD-da.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "b",
+          "text_cach_danhvan": "b|i=>bi",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/bi.jpg"
+        },
+        {
+          "text": "k",
+          "text_cach_danhvan": "k|ê=>kệ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%202/k%E1%BB%87.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f1b004789018a5ab577ffc"
+  },
+  "chuong": "Chương 3",
+  "baihoc": "Bài 3",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "lọ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/l%E1%BB%8D.jpg"
+        },
+        {
+          "text": "lê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/l%C3%AA.jpg"
+        },
+        {
+          "text": "hồ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/h%E1%BB%93.jpg"
+        },
+        {
+          "text": "le le",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/le-le.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "l",
+          "text_cach_danhvan": "l|a=>lá",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/l%C3%A1%20c%C3%A2y.jpg"
+        },
+        {
+          "text": "h",
+          "text_cach_danhvan": "h|e=>hẹ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%203/h%E1%BA%B9.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f1b09f789018a5ab577ffd"
+  },
+  "chuong": "Chương 3",
+  "baihoc": "Bài 4",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "chả cá",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/ch%E1%BA%A3-c%C3%A1.jpg"
+        },
+        {
+          "text": "cá kho",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/c%C3%A1-kho.jpg"
+        },
+        {
+          "text": "cá khô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/c%C3%A1-kh%C3%B4.jpg"
+        },
+        {
+          "text": "chà là",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/ch%C3%A0-l%C3%A0.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ch",
+          "text_cach_danhvan": "ch|ơ=>chợ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/ch%E1%BB%A3.jpg"
+        },
+        {
+          "text": "kh",
+          "text_cach_danhvan": "kh|ê=>khế",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/f570ebad2386aa993c715b213c090e9be78d223e/ch%C6%B0%C6%A1ng%203/b%C3%A0i%204/kh%E1%BA%BF.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f1b332789018a5ab577fff"
+  },
+  "chuong": "Chương 3",
+  "baihoc": "Bài 5",
+  "data_lesson": [
+    {
+      "Kechuyen": [
+        {
+          "title": "Bé và chị đi chợ",
+          "content": [
+            {
+              "text": "Chị và bé đi chợ.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/219316b79fc247174628c841abff8f06edd46f1f/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-3.1.jpg"
+            },
+            {
+              "text": "Hai chị em nhặt được ví tiền.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/219316b79fc247174628c841abff8f06edd46f1f/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-3.2.jpg"
+            },
+            {
+              "text": "Chì và bé nhờ trả lại tiền cho người đánh rơi.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/219316b79fc247174628c841abff8f06edd46f1f/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-3.3.jpg"
+            },
+            {
+              "text": "Hai chị em nghĩ bà sẽ vui.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/219316b79fc247174628c841abff8f06edd46f1f/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-3.4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Ontap": [
+        {
+          "ten_bai_hoc": "d",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/di%E1%BB%81u.jpg",
+          "chu_cua_hinh": "diều"
+        },
+        {
+          "ten_bai_hoc": "đ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/%C4%91%C3%A0n.jpg",
+          "chu_cua_hinh": "đàn"
+        },
+        {
+          "ten_bai_hoc": "i",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/b%C3%AD-%C4%91%E1%BB%8F.jpg",
+          "chu_cua_hinh": "bí"
+        },
+        {
+          "ten_bai_hoc": "k",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/k%E1%BB%87.jpg",
+          "chu_cua_hinh": "kệ"
+        },
+        {
+          "ten_bai_hoc": "l",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/l%C3%A1%20c%C3%A2y.jpg",
+          "chu_cua_hinh": "lá"
+        },
+        {
+          "ten_bai_hoc": "h",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/hoa.jpg",
+          "chu_cua_hinh": "hoa"
+        },
+        {
+          "ten_bai_hoc": "ch",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/con-ch%C3%B3.jpg",
+          "chu_cua_hinh": "chó"
+        },
+        {
+          "ten_bai_hoc": "kh",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/205cdccf451a673ebc7117f0ef619269a2224885/ch%C6%B0%C6%A1ng%203/b%C3%A0i%205/kh%C4%83n.jpg",
+          "chu_cua_hinh": "khăn"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f339008541605d4588d91a"
+  },
+  "chuong": "Chương 4",
+  "baihoc": "Bài 1",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "na",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/na.jpg"
+        },
+        {
+          "text": "mơ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/tr%C3%A1i-m%C6%A1.jpg"
+        },
+        {
+          "text": "ca nô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/ca-n%C3%B4.jpg"
+        },
+        {
+          "text": "cá mè",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/c%C3%A1-m%C3%A8.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "n",
+          "text_cach_danhvan": "n|ơ=>nơ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/n%C6%A1.jpg"
+        },
+        {
+          "text": "m",
+          "text_cach_danhvan": "m|e=>me",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%201/c%C3%A2y-me.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f339938541605d4588d91b"
+  },
+  "chuong": "Chương 4",
+  "baihoc": "Bài 2",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "cá mú",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/c%C3%A1-m%C3%BA.jpg"
+        },
+        {
+          "text": "đỏ lừ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/%C4%91%E1%BB%8F-l%E1%BB%AB.jpg"
+        },
+        {
+          "text": "đu đủ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/%C4%91u-%C4%91%E1%BB%A7.jpg"
+        },
+        {
+          "text": "cá hú",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/c%C3%A1-h%C3%BA.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "u",
+          "text_cach_danhvan": "m|u=>mũ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/m%C5%A9.jpg"
+        },
+        {
+          "text": "ư",
+          "text_cach_danhvan": "ch|ư=>chữ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%202/ch%E1%BB%AF.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f339fe8541605d4588d91c"
+  },
+  "chuong": "Chương 4",
+  "baihoc": "Bài 3",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "ga",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/nh%C3%A0-ga.jpg"
+        },
+        {
+          "text": "gà gô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/g%C3%A0-g%C3%B4.jpg"
+        },
+        {
+          "text": "ghẹ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/con-gh%E1%BA%B9.jpg"
+        },
+        {
+          "text": "ghi",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/ghi.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "g",
+          "text_cach_danhvan": "g|a=>gà",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/g%C3%A0.jpg"
+        },
+        {
+          "text": "gh",
+          "text_cach_danhvan": "gh|ê=>ghế",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%203/gh%E1%BA%BF.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f33b0a8541605d4588d91d"
+  },
+  "chuong": "Chương 4",
+  "baihoc": "Bài 4",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "cá ngừ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/c%C3%A1-ng%E1%BB%AB.jpg"
+        },
+        {
+          "text": "củ nghệ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/c%E1%BB%A7-ngh%E1%BB%87.jpg"
+        },
+        {
+          "text": "ngủ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/ng%E1%BB%A7.jpg"
+        },
+        {
+          "text": "nghĩ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/ngh%C4%A9.jpg"
+        },
+        {
+          "text": "ngô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/ng%C3%B4.jpg"
+        },
+        {
+          "text": "nghé",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/ngh%C3%A9.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ng",
+          "text_cach_danhvan": "ng|ư=>ngừ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/c%C3%A1-ng%E1%BB%AB.jpg"
+        },
+        {
+          "text": "ngh",
+          "text_cach_danhvan": "ngh|ê=>nghệ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%204/c%E1%BB%A7-ngh%E1%BB%87.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f33c348541605d4588d91e"
+  },
+  "chuong": "Chương 4",
+  "baihoc": "Bài 5",
+  "data_lesson": [
+    {
+      "Kechuyen": [
+        {
+          "title": "Nghỉ hè",
+          "content": [
+            {
+              "text": "Bố mẹ dẫn anh Đức và Thử đi biển.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-4.1.jpg"
+            },
+            {
+              "text": "Anh Đức và bố lặn ngắm san hô.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-4.2.jpg"
+            },
+            {
+              "text": "Anh Đức bị con gì đó quấn chân.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-4.3.jpg"
+            },
+            {
+              "text": "Thư muốn được đi lặn biển giống anh Đức.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-4.4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Ontap": [
+        {
+          "ten_bai_hoc": "n",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/n%C6%A1.jpg",
+          "chu_cua_hinh": "nơ"
+        },
+        {
+          "ten_bai_hoc": "m",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/c%C3%A2y-me.jpg",
+          "chu_cua_hinh": "me"
+        },
+        {
+          "ten_bai_hoc": "u",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/%C4%91u-%C4%91%E1%BB%A7.jpg",
+          "chu_cua_hinh": "đu đủ"
+        },
+        {
+          "ten_bai_hoc": "ư",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/th%C6%B0.jpg",
+          "chu_cua_hinh": "thư"
+        },
+        {
+          "ten_bai_hoc": "g",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/g%C3%A0.jpg",
+          "chu_cua_hinh": "gà"
+        },
+        {
+          "ten_bai_hoc": "gh",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/con-gh%E1%BA%B9.jpg",
+          "chu_cua_hinh": "ghẹ"
+        },
+        {
+          "ten_bai_hoc": "ng",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/ng%E1%BB%A7.jpg",
+          "chu_cua_hinh": "ngủ"
+        },
+        {
+          "ten_bai_hoc": "ngh",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/103705c71dfddd9394ef86d9951378b09ab8d697/ch%C6%B0%C6%A1ng%204/b%C3%A0i%205/c%E1%BB%A7-ngh%E1%BB%87.jpg",
+          "chu_cua_hinh": "củ nghệ"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f4766ffcefd645a10f174a"
+  },
+  "chuong": "Chương 5",
+  "baihoc": "Bài 1",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "tê tê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/t%C3%AA-t%C3%AA.jpg"
+        },
+        {
+          "text": "cá thu",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/c%C3%A1-thu.jpg"
+        },
+        {
+          "text": "nho đỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/nho-%C4%91%E1%BB%8F.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "t",
+          "text_cach_danhvan": "t|u=>tủ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/t%E1%BB%A7.jpg"
+        },
+        {
+          "text": "th",
+          "text_cach_danhvan": "th|o=>thỏ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/th%E1%BB%8F.jpg"
+        },
+        {
+          "text": "nh",
+          "text_cach_danhvan": "nh|a=>nhà",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%201/ng%C3%B4i-nh%C3%A0.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f4776dfcefd645a10f174b"
+  },
+  "chuong": "Chương 5",
+  "baihoc": "Bài 2",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "rá",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/c%C3%A1i-r%C3%A1.jpg"
+        },
+        {
+          "text": "gà tre",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/g%C3%A0-tre.jpg"
+        },
+        {
+          "text": "cá rô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/c%C3%A1-r%C3%B4.jpg"
+        },
+        {
+          "text": "cá trê",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/c%C3%A1-tr%C3%AA.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "r",
+          "text_cach_danhvan": "r|ô=>rổ",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/c%C3%A1i-r%E1%BB%95.jpg"
+        },
+        {
+          "text": "tr",
+          "text_cach_danhvan": "tr|e=>tre",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%202/tre.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f477dafcefd645a10f174c"
+  },
+  "chuong": "Chương 5",
+  "baihoc": "Bài 3",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "nĩa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%203/n%C4%A9a.jpg"
+        },
+        {
+          "text": "tía tô",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%203/tia-t%E1%BB%91.jpg"
+        },
+        {
+          "text": "chả chìa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%203/ch%E1%BA%A3-ch%C3%ACa.jpg"
+        },
+        {
+          "text": "cá lia thia",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%203/c%C3%A1-lia-thia.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ia",
+          "text_cach_danhvan": "m|ia=>mía",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%203/c%C3%A2y-m%C3%ADa.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f478aefcefd645a10f174d"
+  },
+  "chuong": "Chương 5",
+  "baihoc": "Bài 4",
+  "data_lesson": [
+    {
+      "Lamquen": [
+        {
+          "text": "rùa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/con-r%C3%B9a.jpg"
+        },
+        {
+          "text": "cửa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/c%E1%BB%ADa.jpg"
+        },
+        {
+          "text": "cua",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/cua.jpg"
+        },
+        {
+          "text": "lúa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/l%C3%BAa.jpg"
+        }
+      ]
+    },
+    {
+      "Danhvan": [
+        {
+          "text": "ua",
+          "text_cach_danhvan": "đ|ua=>đũa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/c%C3%A2y-%C4%91%C5%A9a.jpg"
+        },
+        {
+          "text": "ưa",
+          "text_cach_danhvan": "d|ưa=>dừa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%204/tr%C3%A1i-d%E1%BB%ABa.jpg"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63f479d8fcefd645a10f174e"
+  },
+  "chuong": "Chương 5",
+  "baihoc": "Bài 5",
+  "data_lesson": [
+    {
+      "Kechuyen": [
+        {
+          "title": "Ba chú thỏ",
+          "content": [
+            {
+              "text": "Thỏ mẹ dặn các con ở nhà nhớ cài chặt cửa.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-5.1.jpg"
+            },
+            {
+              "text": "Sói đến gõ cửa, giả vờ tiếng thỏ mẹ.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-5.2.jpg"
+            },
+            {
+              "text": "Thấy bác voi, sói bỏ chạy.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-5.3.jpg"
+            },
+            {
+              "text": "Thỏ mẹ khen các con.",
+              "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/k%E1%BB%83-chuy%E1%BB%87n-5.4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Ontap": [
+        {
+          "ten_bai_hoc": "t",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/t%E1%BB%A7.jpg",
+          "chu_cua_hinh": "tủ"
+        },
+        {
+          "ten_bai_hoc": "th",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/th%E1%BB%8F.jpg",
+          "chu_cua_hinh": "thỏ"
+        },
+        {
+          "ten_bai_hoc": "nh",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/nho-%C4%91%E1%BB%8F.jpg",
+          "chu_cua_hinh": "nho đỏ"
+        },
+        {
+          "ten_bai_hoc": "r",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/c%C3%A1-r%C3%B4.jpg",
+          "chu_cua_hinh": "cá rô"
+        },
+        {
+          "ten_bai_hoc": "tr",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/tre.jpg",
+          "chu_cua_hinh": "tre"
+        },
+        {
+          "ten_bai_hoc": "ia",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/n%C4%A9a.jpg",
+          "chu_cua_hinh": "nĩa"
+        },
+        {
+          "ten_bai_hoc": "ua",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/cua.jpg",
+          "chu_cua_hinh": "cua"
+        },
+        {
+          "ten_bai_hoc": "ưa",
+          "img": "https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/ch%C6%B0%C6%A1ng%205/b%C3%A0i%205/tr%C3%A1i-d%E1%BB%ABa.jpg",
+          "chu_cua_hinh": "dừa"
+        }
+      ]
+    }
+  ]
+}]

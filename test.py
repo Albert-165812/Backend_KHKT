@@ -1,1 +1,12 @@
-print("https://github.com/tranphukhang/SGKlop1/blob/6504524f19aeaca99aae9fdf23d19add998ef24c/chương 5/bài 4/lúa.jpg"[85:])
+import binascii
+
+data = u'tạm biệt'
+print(data) # tạm biệt
+
+a = binascii.hexlify(data.encode('cp1258', errors='backslashreplace'))
+print(a) # b'745c75316561316d2062695c753165633774'
+# if i dont use the error handler here, then I get a UnicodeEncodeError for \u1ea1
+
+print(
+    binascii.unhexlify(a).decode('unicode-escape') # tạm biệt
+)

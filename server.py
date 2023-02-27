@@ -7,6 +7,7 @@ from pymongo import MongoClient
 import numpy as np
 import cv2
 import base64
+import binascii
 from bson import ObjectId
 from handle.detect import YoloDetectImg
 from urllib.parse import unquote
@@ -141,13 +142,14 @@ def nhandienkhuonmat_process():
     img_base64 = img_base64.replace("data:image/webp;base64,", "")
     img_detect = convectBase64toImg(img_base64)
     kq = YoloDetectImg().detect(img_detect, 1)
+    a = binascii.hexlify(kq.encode('cp1258', errors='backslashreplace'))
     if (kq == None):
         return {
             "text_detect": "no detection"
         }
     emit_client_local("TextoAlertWeb", "Page_detect", kq)
     return {
-        "text_detect": kq
+        "text_detect": binascii.unhexlify(a).decode('unicode-escape')
     }
 
 
@@ -174,6 +176,13 @@ def page_current():
     emit_page_curr(data["task"], data["place"], data["content"])
     return "done"
 
+@app.route('/change_Text', methods=['POST'])
+@cross_origin(origin='*')
+def change_Text():
+    id = request.json["text"]
+    a = binascii.hexlify(id.encode('cp1258', errors='backslashreplace'))
+    emit_client_local("TextoAlertWeb", "Page_detect", binascii.unhexlify(a).decode('unicode-escape'))
+    return "done"
 
 @app.route('/state_choosen', methods=['POST'])
 @cross_origin(origin='*')
